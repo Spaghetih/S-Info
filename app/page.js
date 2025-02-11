@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
   return (

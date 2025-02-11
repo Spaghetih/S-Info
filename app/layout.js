@@ -66,7 +66,12 @@ export default function Layout({ children }) {
                 )}
               </li>
               <li>
-                <Link href="/devis" className="hover:text-blue-400 transition">
+                <Link href="/tarifs" className="hover:text-blue-400 transition">
+                  Tarifs
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-blue-400 transition">
                   Contact
                 </Link>
               </li>
@@ -80,4 +85,3 @@ export default function Layout({ children }) {
     </html>
   );
 }
-
