@@ -1,101 +1,124 @@
-import Image from "next/image";
+"use client";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="bg-gray-100 text-gray-900 min-h-screen">
+        {/* Hero Section avec animation */}
+        <section className="flex flex-col items-center justify-center text-center py-20 bg-blue-500 text-white shadow-lg">
+          <motion.h1 
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-5xl font-bold"
+          >
+            Bienvenue sur S-Info
+          </motion.h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* Séparation élégante */}
+          <div className="relative flex items-center justify-center my-6">
+            <div className="w-24 border-t-4 border-white shadow-md"></div>
+            <span className="absolute bg-blue-500 px-4 text-white text-xl font-bold">
+              ✦
+            </span>
+            <div className="w-24 border-t-4 border-white shadow-md"></div>
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.3 }}
+            className="mt-4 text-lg"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Experts en réparation, maintenance et assistance informatique
+          </motion.p>
+
+          {/* Bouton bien visible sous le texte */}
+          <motion.a
+            href="/devis"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="mt-8 px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg shadow-lg hover:bg-gray-200 transition"
           >
-            Read our docs
-          </a>
+            Demander un devis
+          </motion.a>
+        </section>
+
+
+      {/* Nos Services avec animation */}
+      <motion.section 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="py-16 bg-white shadow-md rounded-lg max-w-5xl mx-auto mt-10 px-6"
+      >
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Nos Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="p-6 bg-gray-200 rounded-lg text-center shadow-md">
+            <img src="/repair.png" alt="Réparation PC" className="w-16 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold">Réparation PC</h3>
+            <p className="text-gray-700 mt-2">Dépannage rapide, diagnostic et remplacement de pièces.</p>
+          </div>
+          <div className="p-6 bg-gray-200 rounded-lg text-center shadow-md">
+            <img src="/install.png" alt="Installation Logiciel" className="w-16 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold">Installation Logiciels</h3>
+            <p className="text-gray-700 mt-2">Mise en place de Windows, antivirus, logiciels professionnels.</p>
+          </div>
+          <div className="p-6 bg-gray-200 rounded-lg text-center shadow-md">
+            <img src="/maintenance.png" alt="Maintenance" className="w-16 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold">Maintenance & Optimisation</h3>
+            <p className="text-gray-700 mt-2">Nettoyage, optimisation et mises à jour de votre PC.</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </motion.section>
+
+      {/* Ligne de séparation améliorée */}
+      <div className="relative flex items-center justify-center my-16">
+        <div className="w-3/4 border-t-4 border-gray-500 shadow-md"></div>
+        <span className="absolute bg-gray-100 px-4 text-gray-700 text-xl font-bold">
+          ✦
+        </span>
+      </div>
+
+
+      {/* Pourquoi nous choisir avec animation */}
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="py-16 bg-gray-50 shadow-md rounded-lg max-w-5xl mx-auto mt-10 px-6"
+      >
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Pourquoi choisir S-Info ?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="p-6 bg-white rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold">✅ Service Rapide</h3>
+            <p className="text-gray-700 mt-2">Nous réparons votre ordinateur en un temps record.</p>
+          </div>
+          <div className="p-6 bg-white rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold">💻 Expertise Certifiée</h3>
+            <p className="text-gray-700 mt-2">Des techniciens expérimentés pour garantir la qualité.</p>
+          </div>
+          <div className="p-6 bg-white rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold">🔧 Matériel de Qualité</h3>
+            <p className="text-gray-700 mt-2">Utilisation de pièces et logiciels fiables et reconnus.</p>
+          </div>
+          <div className="p-6 bg-white rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold">📍 Assistance Locale</h3>
+            <p className="text-gray-700 mt-2">Nous intervenons rapidement à domicile ou à distance.</p>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Footer */}
+      <footer className="bg-blue-500 text-white text-center py-6 mt-10 shadow-lg">
+        <p>© 2025 S-Info - Tous droits réservés</p>
+        <p className="mt-2">
+          Contact : <a href="mailto:contact@s-info.com" className="underline">contact@s-info.com</a> | 📞 06 47 17 36 04
+        </p>
       </footer>
-    </div>
+    </main>
   );
 }
