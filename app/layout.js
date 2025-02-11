@@ -71,7 +71,7 @@ export default function Layout({ children }) {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-blue-400 transition">
+                <Link href="/devis" className="hover:text-blue-400 transition">
                   Contact
                 </Link>
               </li>
