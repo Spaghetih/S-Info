@@ -54,6 +54,9 @@ export default function TarifsPage() {
           <li className="flex justify-between border-b border-gray-700 pb-2">
             <span>Réinitialisation mot de passe Windows/Mac</span> <span className="font-semibold">29€</span>
           </li>
+          <li className="flex justify-between border-b border-gray-700 pb-2">
+            <span>🔍 Diagnostic PC (logiciel & matériel)</span> <span className="font-semibold">30-50€</span>
+          </li>
         </ul>
 
         {/* Nettoyage & Optimisation */}
@@ -84,9 +87,6 @@ export default function TarifsPage() {
           </li>
           <li className="flex justify-between border-b border-gray-700 pb-2">
             <span>Récupération de Données (panne logicielle)</span> <span className="font-semibold">99-149€</span>
-          </li>
-          <li className="flex justify-between border-b border-gray-700 pb-2">
-            <span>Diagnostic avancé PC (logiciel & matériel)</span> <span className="font-semibold">39€</span>
           </li>
         </ul>
       </div>

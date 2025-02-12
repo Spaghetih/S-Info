@@ -6,33 +6,52 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 export default function Home() {
   return (
     <main className="bg-gray-900 text-white min-h-screen">
-      {/* Section Accueil */}
-      <section id="accueil" className="flex flex-col items-center justify-center text-center py-20 bg-blue-500 text-white shadow-lg">
-        <motion.h1 
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-5xl font-bold"
-        >
-          Bienvenue sur S-Info
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.3 }}
-          className="mt-4 text-lg"
-        >
-          Experts en réparation, maintenance et assistance informatique
-        </motion.p>
-        <motion.a
-          href="/devis"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-6 px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg shadow-lg hover:bg-gray-200 transition"
-        >
-          Demander un devis
-        </motion.a>
+      {/* Section Accueil avec image de fond */}
+      <section 
+        id="accueil" 
+        className="flex flex-col items-center justify-center text-center py-20 text-white shadow-lg relative"
+        style={{
+          backgroundImage: "url('./background-image1.jpg')", // Remplacez par le chemin de votre image
+          backgroundSize: "120% 150%", // Ajuste la taille de l'image pour couvrir toute la section
+          backgroundPosition: "top", // Centre l'image
+          backgroundRepeat: "no-repeat", // Empêche la répétition de l'image
+          height: "50vh", // Hauteur de la section
+        }}
+      >
+        {/* Overlay sombre pour améliorer la lisibilité du texte */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        {/* Contenu de la section */}
+        <div className="relative z-10">
+          <motion.h1 
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-5xl font-bold"
+          >
+            Bienvenue sur S-Info
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.3 }}
+            className="mt-5 text-lg"
+          >
+            Experts en réparation, maintenance et assistance informatique
+          </motion.p>
+          </div>
+          <div className="flex flex-col items-center mt-24">
+        <Link href="/devis">
+          <motion.a
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg shadow-lg hover:bg-gray-400 transition cursor-pointer"
+          >
+            Demander un devis
+          </motion.a>
+        </Link>
+</div>
       </section>
 
 {/* Section À propos */}
@@ -69,75 +88,85 @@ export default function Home() {
 </section>
 
 
-      {/* Section Services */}
-<section id="services" className="py-20 bg-gray-800 px-6">
-  <h2 className="text-3xl font-bold text-center text-blue-400">🚀 Nos Services Informatiques</h2>
-  <p className="mt-4 text-lg text-gray-300 text-center max-w-3xl mx-auto">
-    Chez <span className="text-blue-400 font-semibold">S-Info</span>, nous offrons un large éventail de services pour vous accompagner dans vos besoins informatiques. 
-    Que vous soyez un particulier ou une entreprise, nous avons les compétences pour résoudre vos problèmes et optimiser votre matériel.
-  </p>
+{/* Section Services */}
+<section 
+  id="services" 
+  className="py-20 px-6 relative bg-cover bg-center bg-no-repeat"
+  style={{ backgroundImage: "url('./background-image2.jpg')" }}
+>
+  {/* Overlay sombre pour améliorer la lisibilité du texte */}
+  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10">
-    
-    {/* Réparation PC */}
-    <div className="p-6 bg-gray-700 rounded-lg text-center shadow-md">
-      <h3 className="text-xl font-semibold text-white">🔧 Réparation & Dépannage</h3>
-      <p className="text-gray-300 mt-2">
-        Problèmes matériels, erreurs système, lenteur ? Nous réparons votre PC et remplaçons les composants défectueux.
-      </p>
+  {/* Contenu de la section */}
+  <div className="relative z-10">
+    <h2 className="text-3xl font-bold text-center text-blue-400">🚀 Nos Services Informatiques</h2>
+    <p className="mt-4 text-lg text-gray-300 text-center max-w-3xl mx-auto">
+      Chez <span className="text-blue-400 font-semibold">S-Info</span>, nous offrons un large éventail de services pour vous accompagner dans vos besoins informatiques. 
+      Que vous soyez un particulier ou une entreprise, nous avons les compétences pour résoudre vos problèmes et optimiser votre matériel.
+    </p>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10">
+      
+      {/* Réparation PC */}
+      <div className="p-6 bg-gray-700 rounded-lg text-center shadow-md">
+        <h3 className="text-xl font-semibold text-white">🔧 Réparation & Dépannage</h3>
+        <p className="text-gray-300 mt-2">
+          Problèmes matériels, erreurs système, lenteur ? Nous réparons votre PC et remplaçons les composants défectueux.
+        </p>
+      </div>
+
+      {/* Installation & Configuration */}
+      <div className="p-6 bg-gray-700 rounded-lg text-center shadow-md">
+        <h3 className="text-xl font-semibold text-white">🖥️ Installation & Configuration</h3>
+        <p className="text-gray-300 mt-2">
+          Installation et mise à jour de Windows, Linux, pilotes, logiciels bureautiques et professionnels.
+        </p>
+      </div>
+
+      {/* Sécurité et Antivirus */}
+      <div className="p-6 bg-gray-700 rounded-lg text-center shadow-md">
+        <h3 className="text-xl font-semibold text-white">🔐 Sécurité & Antivirus</h3>
+        <p className="text-gray-300 mt-2">
+          Protection contre les virus, malware et ransomwares. Mise en place d'antivirus et conseils en cybersécurité.
+        </p>
+      </div>
+
+      {/* Maintenance et Optimisation */}
+      <div className="p-6 bg-gray-700 rounded-lg text-center shadow-md">
+        <h3 className="text-xl font-semibold text-white">⚙️ Maintenance & Optimisation</h3>
+        <p className="text-gray-300 mt-2">
+          Nettoyage, suppression de fichiers inutiles, optimisation des performances et mises à jour pour prolonger la durée de vie de votre ordinateur.
+        </p>
+      </div>
+
+      {/* Réseaux & Internet */}
+      <div className="p-6 bg-gray-700 rounded-lg text-center shadow-md">
+        <h3 className="text-xl font-semibold text-white">📡 Réseaux & Internet</h3>
+        <p className="text-gray-300 mt-2">
+          Configuration de box internet, optimisation du Wi-Fi, installation de routeurs et dépannage réseau.
+        </p>
+      </div>
+
+      {/* Assistance & Support */}
+      <div className="p-6 bg-gray-700 rounded-lg text-center shadow-md">
+        <h3 className="text-xl font-semibold text-white">📞 Assistance & Support</h3>
+        <p className="text-gray-300 mt-2">
+          Besoin d’aide ? Nous proposons un support technique à distance ou à domicile pour résoudre tous vos problèmes.
+        </p>
+      </div>
+
     </div>
 
-    {/* Installation & Configuration */}
-    <div className="p-6 bg-gray-700 rounded-lg text-center shadow-md">
-      <h3 className="text-xl font-semibold text-white">🖥️ Installation & Configuration</h3>
-      <p className="text-gray-300 mt-2">
-        Installation et mise à jour de Windows, Linux, pilotes, logiciels bureautiques et professionnels.
-      </p>
+    {/* Section Demande de Devis */}
+    <div className="text-center mt-10">
+      <p className="text-lg text-gray-300">📩 Besoin d'une assistance immédiate ? Demandez un devis gratuit !</p>
+      <a
+        href="/devis"
+        className="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition"
+      >
+        Demander un devis
+      </a>
     </div>
-
-    {/* Sécurité et Antivirus */}
-    <div className="p-6 bg-gray-700 rounded-lg text-center shadow-md">
-      <h3 className="text-xl font-semibold text-white">🔐 Sécurité & Antivirus</h3>
-      <p className="text-gray-300 mt-2">
-        Protection contre les virus, malware et ransomwares. Mise en place d'antivirus et conseils en cybersécurité.
-      </p>
-    </div>
-
-    {/* Maintenance et Optimisation */}
-    <div className="p-6 bg-gray-700 rounded-lg text-center shadow-md">
-      <h3 className="text-xl font-semibold text-white">⚙️ Maintenance & Optimisation</h3>
-      <p className="text-gray-300 mt-2">
-        Nettoyage, suppression de fichiers inutiles, optimisation des performances et mises à jour pour prolonger la durée de vie de votre ordinateur.
-      </p>
-    </div>
-
-    {/* Réseaux & Internet */}
-    <div className="p-6 bg-gray-700 rounded-lg text-center shadow-md">
-      <h3 className="text-xl font-semibold text-white">📡 Réseaux & Internet</h3>
-      <p className="text-gray-300 mt-2">
-        Configuration de box internet, optimisation du Wi-Fi, installation de routeurs et dépannage réseau.
-      </p>
-    </div>
-
-    {/* Assistance & Support */}
-    <div className="p-6 bg-gray-700 rounded-lg text-center shadow-md">
-      <h3 className="text-xl font-semibold text-white">📞 Assistance & Support</h3>
-      <p className="text-gray-300 mt-2">
-        Besoin d’aide ? Nous proposons un support technique à distance ou à domicile pour résoudre tous vos problèmes.
-      </p>
-    </div>
-
-  </div>
-
-  {/* Section Demande de Devis */}
-  <div className="text-center mt-10">
-    <p className="text-lg text-gray-300">📩 Besoin d'une assistance immédiate ? Demandez un devis gratuit !</p>
-    <a
-      href="/devis"
-      className="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition"
-    >
-      Demander un devis
-    </a>
   </div>
 </section>
 
@@ -192,26 +221,36 @@ export default function Home() {
 
 
 {/* Section Contact */}
-<section id="contact" className="py-20 bg-gray-800 px-6 text-center">
-  <h2 className="text-3xl font-bold text-blue-400">📞 Contact</h2>
-  <p className="mt-4 text-lg text-gray-300">
-    Vous avez une question ou besoin d'un devis ? Contactez-nous par téléphone ou faites une demande en ligne.
-  </p>
+<section 
+  id="contact" 
+  className="py-20 px-6 text-center relative bg-cover bg-center bg-no-repeat"
+  style={{ backgroundImage: "url('./background-image3.jpg')" }}
+>
+  {/* Overlay sombre pour améliorer la lisibilité du texte */}
+  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-  {/* Numéro de téléphone */}
-  <div className="mt-6 text-xl text-white flex justify-center items-center gap-2">
-    <span className="text-3xl">📱</span>
-    <span className="font-semibold">06 47 17 36 04</span>
-  </div>
+  {/* Contenu de la section */}
+  <div className="relative z-10">
+    <h2 className="text-3xl font-bold text-blue-400">📞 Contact</h2>
+    <p className="mt-4 text-lg text-gray-300">
+      Vous avez une question ou besoin d'un devis ? Contactez-nous par téléphone ou faites une demande en ligne.
+    </p>
 
-  {/* Bouton vers la page Devis */}
-  <div className="mt-6">
-    <a
-      href="/devis"
-      className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition"
-    >
-      Faire une demande de devis
-    </a>
+    {/* Numéro de téléphone */}
+    <div className="mt-6 text-xl text-white flex justify-center items-center gap-2">
+      <span className="text-3xl">📱</span>
+      <span className="font-semibold">06 47 17 36 04</span>
+    </div>
+
+    {/* Bouton vers la page Devis */}
+    <div className="mt-6">
+      <a
+        href="/devis"
+        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition"
+      >
+        Faire une demande de devis
+      </a>
+    </div>
   </div>
 </section>
 
