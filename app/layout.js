@@ -15,6 +15,7 @@ export default function Layout({ children }) {
     setIsMenuOpen(!isMenuOpen); // Inverse l'état du menu
   };
 
+  
   return (
     <html lang="fr">
       <head>
