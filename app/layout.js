@@ -5,8 +5,9 @@ import "./globals.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
+
 
 export default function Layout({ children }) {
   const pathname = usePathname();
@@ -55,7 +56,13 @@ export default function Layout({ children }) {
                 {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
               </button>
             </div>
-
+              {/* Email avec icône d'enveloppe */}
+              <div className="hidden md:flex items-center">
+                <a href="mailto:unvr.suleyman@gmail.com" className="flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-full transition hover:bg-gray-600">
+                  <FaEnvelope size={20} />
+                  <span className="text-sm">contact@SInformatique.com</span>
+                </a>
+              </div>
             {/* Onglets de navigation */}
             <ul className={`${isMenuOpen ? "flex" : "hidden"} md:flex md:space-x-6 absolute md:static top-16 left-0 right-0 bg-gray-800 md:bg-transparent p-4 md:p-0 flex-col md:flex-row items-center w-full md:w-auto`}>  
               <li>
@@ -115,6 +122,7 @@ export default function Layout({ children }) {
             </ul>
           </nav>
         </header>
+        
 
         {/* Contenu des pages */}
         <main className="pt-20">{children}</main>
