@@ -40,17 +40,16 @@ export default function Home() {
     </motion.p>
   </div>
   <div className="flex flex-col items-center mt-24">
-    <Link href="/devis">
-      <motion.a
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg shadow-lg hover:bg-gray-400 transition cursor-pointer"
-      >
-        Demander un devis
-      </motion.a>
-    </Link>
-  </div>
+  <motion.button
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.8, delay: 0.5 }}
+    className="px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg shadow-lg hover:bg-gray-400 transition cursor-pointer"
+    onClick={() => window.location.href = "/devis"} // Redirection manuelle
+  >
+    Demander un devis
+  </motion.button>
+</div>
 </section>
 
 {/* Section À propos */}
