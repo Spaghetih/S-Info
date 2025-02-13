@@ -56,15 +56,16 @@ export default function DevisPage() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-4">
+        
         {/* Bouton Retour à l'accueil */}
-<div className="absolute top-6 left-6">
-  <a
-    href="/"
-    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow-lg transition"
-  >
-    ← Retour à l'accueil
-  </a>
-</div>
+        <div className="absolute top-6 left-6">
+        <a
+            href="/"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow-lg transition"
+        >
+            ← Retour à l'accueil
+        </a>
+        </div>
 
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
@@ -73,7 +74,7 @@ export default function DevisPage() {
         className="bg-gray-800 p-8 rounded-lg shadow-2xl w-full max-w-lg"
       >
         <h1 className="text-3xl font-bold text-center text-blue-400 mb-6">
-          📩 Demande de Devis & Réservation
+          📩 Demande de Devis
         </h1>
 
         <form onSubmit={handleSubmit} className="space-y-6">
