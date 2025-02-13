@@ -2,10 +2,13 @@
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Modal from "@/components/modal"; // Import du composant Modal
 
 export default function Home() {
   return (
     <main className="bg-gray-900 text-white min-h-screen">
+            {/* Affichage de la modale dès l'arrivée sur la page */}
+            <Modal />
 {/* Section Accueil avec image de fond */}
 <section 
   id="accueil" 
