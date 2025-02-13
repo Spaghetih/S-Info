@@ -6,53 +6,52 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 export default function Home() {
   return (
     <main className="bg-gray-900 text-white min-h-screen">
-      {/* Section Accueil avec image de fond */}
-      <section 
-        id="accueil" 
-        className="flex flex-col items-center justify-center text-center py-20 text-white shadow-lg relative"
-        style={{
-          backgroundImage: "url('./background-image1.jpg')", // Remplacez par le chemin de votre image
-          backgroundSize: "120% 150%", // Ajuste la taille de l'image pour couvrir toute la section
-          backgroundPosition: "top", // Centre l'image
-          backgroundRepeat: "no-repeat", // Empêche la répétition de l'image
-          height: "50vh", // Hauteur de la section
-        }}
-      >
-        {/* Overlay sombre pour améliorer la lisibilité du texte */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+{/* Section Accueil avec image de fond */}
+<section 
+  id="accueil" 
+  className="flex flex-col items-center justify-center text-center py-20 text-white shadow-lg relative min-h-screen" // Utilisez min-h-screen pour couvrir toute la hauteur de l'écran
+  style={{
+    backgroundImage: "url('./background-image1.jpg')", // Remplacez par le chemin de votre image
+    backgroundSize: "cover", // Couvre toute la section sans déformation
+    backgroundPosition: "center", // Centre l'image verticalement et horizontalement
+    backgroundRepeat: "no-repeat", // Empêche la répétition de l'image
+  }}
+>
+  {/* Overlay sombre pour améliorer la lisibilité du texte */}
+  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        {/* Contenu de la section */}
-        <div className="relative z-10">
-          <motion.h1 
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-5xl font-bold"
-          >
-            Bienvenue sur S-Info
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.3 }}
-            className="mt-5 text-lg"
-          >
-            Experts en réparation, maintenance et assistance informatique
-          </motion.p>
-          </div>
-          <div className="flex flex-col items-center mt-24">
-        <Link href="/devis">
-          <motion.a
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg shadow-lg hover:bg-gray-400 transition cursor-pointer"
-          >
-            Demander un devis
-          </motion.a>
-        </Link>
-</div>
-      </section>
+  {/* Contenu de la section */}
+  <div className="relative z-10">
+    <motion.h1 
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="text-5xl font-bold"
+    >
+      Bienvenue sur S-Info
+    </motion.h1>
+    <motion.p
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2, delay: 0.3 }}
+      className="mt-5 text-lg"
+    >
+      Experts en réparation, maintenance et assistance informatique
+    </motion.p>
+  </div>
+  <div className="flex flex-col items-center mt-24">
+    <Link href="/devis">
+      <motion.a
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg shadow-lg hover:bg-gray-400 transition cursor-pointer"
+      >
+        Demander un devis
+      </motion.a>
+    </Link>
+  </div>
+</section>
 
 {/* Section À propos */}
 <section id="a-propos" className="py-20 px-6 max-w-4xl mx-auto text-center">
@@ -235,6 +234,7 @@ export default function Home() {
     <p className="mt-4 text-lg text-gray-300">
       Vous avez une question ou besoin d'un devis ? Contactez-nous par téléphone ou faites une demande en ligne.
     </p>
+
 
     {/* Numéro de téléphone */}
     <div className="mt-6 text-xl text-white flex justify-center items-center gap-2">
