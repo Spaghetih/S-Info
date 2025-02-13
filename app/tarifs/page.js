@@ -16,8 +16,8 @@ export default function TarifsPage() {
       </motion.h1>
 
       <p className="text-center text-lg text-gray-300 mt-4">
-        Tarifs clairs et transparents pour tous nos services. Tous les prix sont en **TTC**.
-      </p>
+  Tarifs clairs et transparents pour tous nos services. Tous les prix sont en <span className="font-bold">TTC</span>.
+</p>
 
       {/* Liste des tarifs */}
       <div className="max-w-4xl mx-auto mt-10">

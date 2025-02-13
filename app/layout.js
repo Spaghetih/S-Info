@@ -42,10 +42,13 @@ export default function Layout({ children }) {
         {/* Barre de navigation */}
         <header className={`fixed top-0 left-0 w-full bg-gray-800 shadow-lg z-50 transition-transform duration-500 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}>
           <nav className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center h-16">
-            {/* Logo affiché uniquement sur les grands écrans */}
-            <div className="hidden md:block">
-              <Image src="/logo.png" alt="Logo S-Info" width={50} height={50} />
-            </div>
+              {/* Logo et texte affichés uniquement sur les grands écrans */}
+              <div className="hidden md:flex items-center space-x-3">
+                <Link href="/" className="flex items-center space-x-2">
+                  <Image src="/logo.png" alt="Logo S-Info" width={110} height={100} className="cursor-pointer" />
+                  <span className="text-white text-xl font-bold">S-Informatique</span>
+                </Link>
+              </div>
             {/* Menu hamburger */}
             <div className="md:hidden">
               <button onClick={toggleMenu} className="text-white focus:outline-none">
