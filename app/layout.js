@@ -126,6 +126,10 @@ export default function Layout({ children }) {
 
         {/* Contenu des pages */}
         <main className="pt-20">{children}</main>
+                {/* Pied de page */}
+        <footer className="bg-gray-800 text-gray-400 text-center py-4 mt-10">
+          <p>&copy; {new Date().getFullYear()} S-Info. Tous droits réservés.</p>
+        </footer>
       </body>
     </html>
   );
