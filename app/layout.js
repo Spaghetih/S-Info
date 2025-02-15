@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
-
+import MentionsLegales from "./mentionslegales/page";
 
 export default function Layout({ children }) {
   const pathname = usePathname();
@@ -32,7 +32,7 @@ export default function Layout({ children }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
+   return (
     <html lang="fr">
       <head>
         <title>S-Info | Services Informatiques</title>
@@ -57,7 +57,7 @@ export default function Layout({ children }) {
               </button>
             </div>
               {/* Email avec icône d'enveloppe */}
-              <div className="hidden md:flex items-center">
+             <div className="hidden md:flex items-center">
                 <a href="mailto:unvr.suleyman@gmail.com" className="flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-full transition hover:bg-gray-600">
                   <FaEnvelope size={20} />
                   <span className="text-sm">contact@SInformatique.com</span>
@@ -109,11 +109,11 @@ export default function Layout({ children }) {
                   </Link>
                 )}
               </li>
-              <li>
+{/*             <li>
                 <Link href="/tarifs" className="hover:text-blue-400 transition block py-2 md:py-0">
                   Tarifs
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/devis" className="bg-white text-gray-900 font-bold py-2 px-4 rounded-full block transition hover:bg-gray-300">
                   Contact
@@ -126,10 +126,16 @@ export default function Layout({ children }) {
 
         {/* Contenu des pages */}
         <main className="pt-20">{children}</main>
-                {/* Pied de page */}
-        <footer className="bg-gray-800 text-gray-400 text-center py-4 mt-10">
-          <p>&copy; {new Date().getFullYear()} S-Info. Tous droits réservés.</p>
-        </footer>
+    {/* Pied de page */}
+    <footer className="bg-gray-800 text-gray-400 text-center py-4 mt-10">
+      <p>
+        &copy; {new Date().getFullYear()} S-Informatique Tous droits réservés.  
+        <a href="/mentionslegales" className="text-blue-400 hover:underline ml-2">
+          Mentions légales
+        </a>
+      </p>
+    </footer>
+
       </body>
     </html>
   );
