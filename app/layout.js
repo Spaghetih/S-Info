@@ -136,7 +136,8 @@ export default function Layout({ children }) {
         </a>
       </p>
     </footer>
-
+    
+    <Analytics />
       </body>
     </html>
   );
