@@ -9,6 +9,7 @@ import { FaBars, FaTimes, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
 import MentionsLegales from "./mentionslegales/page";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Layout({ children }) {
   const pathname = usePathname();
@@ -136,8 +137,9 @@ export default function Layout({ children }) {
         </a>
       </p>
     </footer>
-    
+
     <Analytics />
+    <SpeedInsights/>
       </body>
     </html>
   );
