@@ -34,7 +34,7 @@ export default function DevisPage() {
     const webhookURL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL;
 
     const data = {
-      content: `📩 **Nouvelle demande de devis !**\n\n👤 **Nom :** ${form.nom}\n📧 **Email :** ${form.email}\n📞 **Téléphone :** ${form.telephone}\n📝 **Message :** ${form.message}\n🌍 **Adresse IP :** ${ip || "Non disponible"}`,
+      content: `📩 **Nouvelle demande de contact !**\n\n👤 **Nom :** ${form.nom}\n📧 **Email :** ${form.email}\n📞 **Téléphone :** ${form.telephone}\n📝 **Message :** ${form.message}\n🌍 **Adresse IP :** ${ip || "Non disponible"}`,
     };
 
     try {
@@ -74,7 +74,7 @@ export default function DevisPage() {
         className="bg-gray-800 p-8 rounded-lg shadow-2xl w-full max-w-lg"
       >
         <h1 className="text-3xl font-bold text-center text-blue-400 mb-6">
-          📩 Demande de Devis
+          📩 Demande de contact
         </h1>
 
         <form onSubmit={handleSubmit} className="space-y-6">

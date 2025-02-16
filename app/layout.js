@@ -117,7 +117,7 @@ export default function Layout({ children }) {
                 </Link>
               </li> */}
               <li>
-                <Link href="/devis" className="bg-white text-gray-900 font-bold py-2 px-4 rounded-full block transition hover:bg-gray-300">
+                <Link href="/contact" className="bg-white text-gray-900 font-bold py-2 px-4 rounded-full block transition hover:bg-gray-300">
                   Contact
                 </Link>
               </li>

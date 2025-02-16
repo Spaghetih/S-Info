@@ -49,7 +49,7 @@ export default function Home() {
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.8, delay: 0.5 }}
     className="px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg shadow-lg hover:bg-gray-400 transition cursor-pointer"
-    onClick={() => window.location.href = "/devis"} // Redirection manuelle
+    onClick={() => window.location.href = "/contact"} // Redirection manuelle
   >
     Demander un devis
   </motion.button>
@@ -163,7 +163,7 @@ export default function Home() {
     <div className="text-center mt-10">
       <p className="text-lg text-gray-300">📩 Besoin d'une assistance immédiate ? Demandez un devis gratuit !</p>
       <a
-        href="/devis"
+        href="/contact"
         className="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition"
       >
         Demander un devis
@@ -245,13 +245,13 @@ export default function Home() {
       <span className="font-semibold">06 47 17 36 04</span>
     </div>
 
-    {/* Bouton vers la page Devis */}
+    {/* Bouton vers la page contact */}
     <div className="mt-6">
       <a
-        href="/devis"
+        href="/contact"
         className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition"
       >
-        Faire une demande de devis
+        Faire une demande de contact
       </a>
     </div>
   </div>
