@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
 import MentionsLegales from "./mentionslegales/page";
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Layout({ children }) {
   const pathname = usePathname();

@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Modal from "@/components/modal"; // Import du composant Modal
 import MentionsLegales from "./mentionslegales/page";
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   return (

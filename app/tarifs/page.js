@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react"
 
 export default function TarifsPage() {
   return (
