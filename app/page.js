@@ -32,7 +32,7 @@ export default function Home() {
       transition={{ duration: 1 }}
       className="text-5xl font-bold"
     >
-      Bienvenue sur S-Info
+      Bienvenue sur S-Informatique
     </motion.h1>
     <motion.p
       initial={{ opacity: 0, y: -20 }}
@@ -58,9 +58,9 @@ export default function Home() {
 
 {/* Section À propos */}
 <section id="a-propos" className="py-20 px-6 max-w-4xl mx-auto text-center">
-  <h2 className="text-3xl font-bold text-blue-400">👨‍💻 À propos de S-Info</h2>
+  <h2 className="text-3xl font-bold text-blue-400">👨‍💻 À propos de S-Informatique</h2>
   <p className="mt-6 text-lg text-gray-300 leading-relaxed">
-    Chez <span className="text-blue-400 font-semibold">S-Info</span>, notre mission est d'offrir un service 
+    Chez <span className="text-blue-400 font-semibold">S-Informatique</span>, notre mission est d'offrir un service 
     informatique de qualité, accessible à tous. Que ce soit pour un problème technique, une optimisation 
     de votre matériel ou un dépannage rapide, nous mettons tout en œuvre pour répondre à vos besoins efficacement.  
   </p>
@@ -103,7 +103,7 @@ export default function Home() {
   <div className="relative z-10">
     <h2 className="text-3xl font-bold text-center text-blue-400">🚀 Nos Services Informatiques</h2>
     <p className="mt-4 text-lg text-gray-300 text-center max-w-3xl mx-auto">
-      Chez <span className="text-blue-400 font-semibold">S-Info</span>, nous offrons un large éventail de services pour vous accompagner dans vos besoins informatiques. 
+      Chez <span className="text-blue-400 font-semibold">S-Informatique</span>, nous offrons un large éventail de services pour vous accompagner dans vos besoins informatiques. 
       Que vous soyez un particulier ou une entreprise, nous avons les compétences pour résoudre vos problèmes et optimiser votre matériel.
     </p>
 

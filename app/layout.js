@@ -35,8 +35,8 @@ export default function Layout({ children }) {
    return (
     <html lang="fr">
       <head>
-        <title>S-Info | Services Informatiques</title>
-        <meta name="description" content="S-Info - Réparation et assistance informatique." />
+        <title>S-Informatique | Services Informatiques</title>
+        <meta name="description" content="S-Informatique - Réparation et assistance informatique." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="min-h-screen bg-gray-900 text-white">
@@ -46,7 +46,7 @@ export default function Layout({ children }) {
               {/* Logo et texte affichés uniquement sur les grands écrans */}
               <div className="hidden md:flex items-center space-x-3">
                 <Link href="/" className="flex items-center space-x-2">
-                  <Image src="/logo.png" alt="Logo S-Info" width={110} height={100} className="cursor-pointer" />
+                  <Image src="/logo.png" alt="Logo S-Informatique" width={110} height={100} className="cursor-pointer" />
                   <span className="text-white text-xl font-bold">S-Informatique</span>
                 </Link>
               </div>
@@ -60,7 +60,7 @@ export default function Layout({ children }) {
              <div className="hidden md:flex items-center">
                 <a href="mailto:unvr.suleyman@gmail.com" className="flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-full transition hover:bg-gray-600">
                   <FaEnvelope size={20} />
-                  <span className="text-sm">contact@SInformatique.com</span>
+                  <span className="text-sm">unvr.suleyman@gmail.com</span>
                 </a>
               </div>
             {/* Onglets de navigation */}
