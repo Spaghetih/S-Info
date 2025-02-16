@@ -15,16 +15,16 @@ const MentionsLegales = () => {
         <p><strong>SIRET :</strong> 982 152 506 00019</p>
       </section>
 
-      <section className="mb-6">
+{/*       <section className="mb-6">
         <h2 className="text-xl font-semibold">2. Hébergeur du site</h2>
         <p><strong>Nom de l’hébergeur :</strong> [OVH, Hostinger...]</p>
         <p><strong>Adresse :</strong> [Adresse de l’hébergeur]</p>
         <p><strong>Site web :</strong> [URL de l’hébergeur]</p>
         <p><strong>Téléphone :</strong> [Numéro de contact de l’hébergeur]</p>
-      </section>
+      </section> */}
 
         <section className="mb-6">
-    <h2 className="text-xl font-semibold">3. Activité et services</h2>
+    <h2 className="text-xl font-semibold">2. Activité et services</h2>
     <p>
       Le site <strong>S-Info</strong> propose des prestations de <strong>diagnostic et de réparation informatique</strong>, adaptées aux particuliers et aux professionnels.
     </p>
@@ -43,26 +43,26 @@ const MentionsLegales = () => {
 
 
       <section className="mb-6">
-        <h2 className="text-xl font-semibold">4. Propriété intellectuelle</h2>
+        <h2 className="text-xl font-semibold">3. Propriété intellectuelle</h2>
         <p>Tous les contenus présents sur ce site (textes, images, logos...) sont la propriété exclusive de S-Info, sauf mention contraire.</p>
         <p>Toute reproduction ou utilisation sans autorisation est interdite.</p>
       </section>
 
       <section className="mb-6">
-        <h2 className="text-xl font-semibold">5. Protection des données personnelles</h2>
+        <h2 className="text-xl font-semibold">4. Protection des données personnelles</h2>
         <p>Les informations collectées via le site (nom, email, téléphone…) sont utilisées uniquement pour le traitement des demandes de devis et la gestion des interventions.</p>
         <p>Conformément au <strong>RGPD</strong>, vous avez un droit d’accès, de rectification et de suppression de vos données personnelles.</p>
         <p>Pour toute demande, contactez-nous à <strong>unvr.suleyman@gmail.com</strong>.</p>
       </section>
 
       <section className="mb-6">
-        <h2 className="text-xl font-semibold">6. Responsabilité</h2>
+        <h2 className="text-xl font-semibold">5. Responsabilité</h2>
         <p>S-Info s’engage à fournir des services de réparation dans les meilleures conditions possibles.</p>
         <p>Cependant, nous ne saurions être tenus responsables des dommages résultant d’une mauvaise utilisation du matériel par le client après réparation.</p>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold">7. Contact</h2>
+        <h2 className="text-xl font-semibold">6. Contact</h2>
         <p>Pour toute question, vous pouvez nous contacter à <strong>unvr.suleyman@gmail.com</strong> ou par téléphone au <strong>+33 6 47 17 36 04</strong>.</p>
       </section>
     </div>
